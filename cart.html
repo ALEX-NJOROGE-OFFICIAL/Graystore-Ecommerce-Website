@@ -1,0 +1,206 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>GrayStore</title>
+
+</head>
+<body>
+
+
+
+<div class="header">
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/xxxx.PNG" width="150px"></a>
+        </div>
+
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="product details page.html">Single Product</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+       <a href="cart.html"> <img src="images/cart1.png" width="30px " height="30px"></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+</div>
+
+
+
+<!--cart item details-->
+
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/img41.PNG">
+                    <div>
+                        <p>Tommy Hilfiger Denim Jacket</p>
+                        <small style="margin-left: -25px;">Price : Ksh2100</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>Ksh2100</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/img19.jpg">
+                    <div>
+                        <p>Fear of god Jacket</p>
+                        <small style="margin-left: -25px;">Price : Ksh2900</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>Ksh2900</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/img22.jpg">
+                    <div>
+                        <p>Winter Jacket</p>
+                        <small style="margin-left: -25px;">Price : Ksh3600</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>Ksh3600</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/img23.jpg">
+                    <div>
+                        <p>Red Nike Air Uptempos</p>
+                        <small style="margin-left: -25px;">Price : Ksh4000</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>Ksh4000</td>
+        </tr>
+    </table>
+
+<div class="total-price">
+    <table>
+        <tr>
+            <td>Subtotal</td>
+            <td>Ksh 8000</td>
+        </tr>
+        <tr>
+            <td>Tax</td>
+            <td>Ksh 1200</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>Ksh 9200  </td>
+        </tr>
+    </table>
+</div>
+
+
+</div>
+
+
+
+
+    
+
+
+
+
+<!---footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download our app for Android and ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="images/img38.PNG" alt="">
+                    <img src="images/img37.PNG" alt="">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/xxxx.png
+                " alt="">
+                <p>Our purpose is to make cool fashion items available to the many</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+            
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>YouTube</li>
+            
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2021 - Alex Njoroge</p>
+    </div>
+</div>
+
+
+
+<!--js for toggle menu-->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+    
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else{
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+
+
+
+</body>
+</html>

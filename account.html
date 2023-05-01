@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>GrayStore</title>
+
+</head>
+<body>
+
+
+
+<div class="header">
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/xxxx.PNG" width="150px"></a>
+        </div>
+
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="product details page.html">Single Product</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <a href="cart.html"> <img src="images/cart1.png" width="30px " height="30px"></a>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+</div>
+</div>
+
+
+
+<!--account page-->
+
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="indicator">
+                    </div>
+                    <form id="loginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="password"  placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        
+                        <br> 
+                        <a href="">Forgot Password?</a>
+                    </form>
+                    <form id="regForm">
+                        <!-- <input type="text" placeholder="Username"> -->
+                        <input type="email" id="signup-email" placeholder="Email">
+                        <input type="password" id="signup-password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    
+
+
+
+
+<!---footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download our app for Android and ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="images/img38.PNG" alt="">
+                    <img src="images/img37.PNG" alt="">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/xxxx.png
+                " alt="">
+                <p>Our purpose is to make cool fashion items available to the many</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+            
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>YouTube</li>
+            
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2021 - Alex Njoroge</p>
+    </div>
+</div>
+
+
+<script src="https:www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+<script src="https:www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+<script src="https:www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+  <script>
+
+  
+    const firebaseConfig = {
+      apiKey: "AIzaSyC-yyDyeTAGLobD0MZvkaI88jHtSlsIhzU",
+      authDomain: "authentication-9293f.firebaseapp.com",
+      projectId: "authentication-9293f",
+      storageBucket: "authentication-9293f.appspot.com",
+      messagingSenderId: "304634407779",
+      appId: "1:304634407779:web:fa9a4a4ee81efce4e98156",
+      measurementId: "G-TB3TZSRZ97"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    db.settings({timestampsInSnapshots:true})
+  </script>
+
+
+
+
+  
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./js/auth.js"></script>
+<!--js for toggle menu-->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+    
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else{
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+
+<!--js for toggle form-->
+
+<script>
+    var loginForm = document.getElementById("loginForm");
+    var regForm = document.getElementById("regForm");
+    var indicator = document.getElementById("indicator")
+
+    function register(){
+        regForm.style.transform = "translateX(0px)";
+        loginForm.style.transform = "translateX(0px)";
+        indicator.style.transform = "translateX(100px)";
+    }
+    function login(){
+        regForm.style.transform = "translateX(300px)";
+        loginForm.style.transform = "translateX(300px)";
+        indicator.style.transform = "translateX(0px)";
+    }
+
+</script>
+
+
+
+
+
+</body>
+</html>
